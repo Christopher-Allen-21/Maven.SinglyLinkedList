@@ -3,7 +3,7 @@ package com.zipcodewilmington.singlylinkedlist;
 /**
  * Created by leon on 1/10/18.
  */
-public class SinglyLinkedList<T> {
+public class SinglyLinkedList<T extends Comparable> {
 
     class Node{
         T data;
@@ -134,11 +134,46 @@ public class SinglyLinkedList<T> {
     }
 
     public SinglyLinkedList<T> copy(){
-        return null;
+        SinglyLinkedList<T> copyList = new SinglyLinkedList<T>();
+        Node current = head;
+
+        while(current != null){
+            copyList.add(current.data);
+            current = current.next;
+        }
+
+        return copyList;
     }
 
     public SinglyLinkedList<T> sort(){
-        return null;
+        Node current = head;
+        Node next = null;
+        T temp;
+
+        //sort elements of current list
+        while(current != null){
+            next = current.next;
+
+            while(next != null){
+                if(current.data.compareTo(next.data) > 0){
+                    temp = current.data;
+                    current.data = next.data;
+                    next.data = temp;
+                }
+                next = next.next;
+            }
+            current = current.next;
+        }
+
+        //add sorted elements to sortedList
+        SinglyLinkedList<T> sortedList = new SinglyLinkedList<T>();
+        Node newCurrent = head;
+        while(newCurrent != null){
+            sortedList.add(newCurrent.data);
+            newCurrent = newCurrent.next;
+        }
+        return sortedList;
+
     }
 
     public SinglyLinkedList<T> reverse(){
