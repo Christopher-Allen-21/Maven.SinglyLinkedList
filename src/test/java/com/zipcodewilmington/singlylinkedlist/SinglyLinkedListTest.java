@@ -240,33 +240,33 @@ public class SinglyLinkedListTest {
         Assert.assertEquals(expected3,actual3);
     }
 
-//    @Test
-//    public void testReverse(){
-//        SinglyLinkedList<String> myList = new SinglyLinkedList<String>();
-//
-//        String string1 = "Hello 1";
-//        String string2 = "Hello 2";
-//        String string3 = "Hello 3";
-//
-//        myList.add(string1);
-//        myList.add(string2);
-//        myList.add(string3);
-//
-//        SinglyLinkedList<String> reverseList = myList.reverse();
-//
-//        String expected1 = string3;
-//        String actual1 = reverseList.get(0);
-//
-//        String expected2 = string2;
-//        String actual2 = reverseList.get(1);
-//
-//        String expected3 = string1;
-//        String actual3 = reverseList.get(2);
-//
-//        Assert.assertEquals(expected1,actual1);
-//        Assert.assertEquals(expected2,actual2);
-//        Assert.assertEquals(expected3,actual3);
-//    }
+    @Test
+    public void testReverse(){
+        SinglyLinkedList<String> myList = new SinglyLinkedList<String>();
+
+        String string1 = "Hello 1";
+        String string2 = "Hello 2";
+        String string3 = "Hello 3";
+
+        myList.add(string1);
+        myList.add(string2);
+        myList.add(string3);
+
+        SinglyLinkedList<String> reverseList = myList.reverse();
+
+        String expected1 = string3;
+        String actual1 = reverseList.get(0);
+
+        String expected2 = string2;
+        String actual2 = reverseList.get(1);
+
+        String expected3 = string1;
+        String actual3 = reverseList.get(2);
+
+        Assert.assertEquals(expected1,actual1);
+        Assert.assertEquals(expected2,actual2);
+        Assert.assertEquals(expected3,actual3);
+    }
 
     @Test
     public void testSort1(){

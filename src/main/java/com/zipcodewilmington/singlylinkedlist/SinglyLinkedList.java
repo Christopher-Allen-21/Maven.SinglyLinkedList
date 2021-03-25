@@ -177,7 +177,28 @@ public class SinglyLinkedList<T extends Comparable> {
     }
 
     public SinglyLinkedList<T> reverse(){
-        return null;
+        Node pointer = head;
+        Node prev = null;
+        Node current = null;
+
+        while(pointer != null){
+            current = pointer;
+            pointer = pointer.next;
+
+            current.next = prev;
+            prev = current;
+            head = current;
+        }
+
+        //add reversed elements to sortedList
+        SinglyLinkedList<T> reversedList = new SinglyLinkedList<T>();
+        Node newCurrent = head;
+        while(newCurrent != null){
+            reversedList.add(newCurrent.data);
+            newCurrent = newCurrent.next;
+        }
+        return reversedList;
+
     }
 
     public SinglyLinkedList<T> slice(int startIndex, int stopIndex){

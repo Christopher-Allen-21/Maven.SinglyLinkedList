@@ -169,7 +169,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="JUnit.SinglyLinkedListTest.testSort2">
+  <component name="RunManager" selected="JUnit.SinglyLinkedListTest.testReverse">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -381,9 +381,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SinglyLinkedListTest.testReverse" />
         <item itemvalue="JUnit.SinglyLinkedListTest.testSort2" />
         <item itemvalue="JUnit.SinglyLinkedListTest.testSort" />
-        <item itemvalue="JUnit.SinglyLinkedListTest.testReverse" />
         <item itemvalue="JUnit.SinglyLinkedListTest.testCopy" />
         <item itemvalue="JUnit.SinglyLinkedListTest.getTest4" />
       </list>
@@ -397,7 +397,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515621994762</updated>
-      <workItem from="1616593781973" duration="6508000" />
+      <workItem from="1616593781973" duration="7838000" />
     </task>
     <servers />
   </component>
