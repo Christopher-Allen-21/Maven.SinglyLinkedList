@@ -314,4 +314,36 @@ public class SinglyLinkedListTest {
         Assert.assertEquals(expected2,actual2);
         Assert.assertEquals(expected3,actual3);
     }
+
+    @Test
+    public void testSlice(){
+        SinglyLinkedList<String> myList = new SinglyLinkedList<String>();
+
+        String string1 = "Hello 1";
+        String string2 = "Hello 2";
+        String string3 = "Hello 3";
+        String string4 = "Hello 4";
+        String string5 = "Hello 5";
+
+        myList.add(string1);
+        myList.add(string2);
+        myList.add(string3);
+        myList.add(string4);
+        myList.add(string5);
+
+        SinglyLinkedList<String> sliceList = myList.slice(1,3);
+
+        String expected1 = string2;
+        String actual1 = sliceList.get(0);
+
+        String expected2 = string3;
+        String actual2 = sliceList.get(1);
+
+        String expected3 = string4;
+        String actual3 = sliceList.get(2);
+
+        Assert.assertEquals(expected1,actual1);
+        Assert.assertEquals(expected2,actual2);
+        Assert.assertEquals(expected3,actual3);
+    }
 }

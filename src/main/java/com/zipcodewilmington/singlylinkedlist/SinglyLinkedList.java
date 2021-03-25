@@ -190,7 +190,7 @@ public class SinglyLinkedList<T extends Comparable> {
             head = current;
         }
 
-        //add reversed elements to sortedList
+        //add reversed elements to reveredList
         SinglyLinkedList<T> reversedList = new SinglyLinkedList<T>();
         Node newCurrent = head;
         while(newCurrent != null){
@@ -202,7 +202,19 @@ public class SinglyLinkedList<T extends Comparable> {
     }
 
     public SinglyLinkedList<T> slice(int startIndex, int stopIndex){
-        return null;
+        SinglyLinkedList<T> sliceList = new SinglyLinkedList<T>();
+        Node current = head;
+        int internalIndex = 0;
+
+        while(current != null){
+            if(internalIndex>=startIndex && internalIndex<=stopIndex){
+                sliceList.add(current.data);
+            }
+            current = current.next;
+            internalIndex++;
+        }
+
+        return sliceList;
     }
 
 
