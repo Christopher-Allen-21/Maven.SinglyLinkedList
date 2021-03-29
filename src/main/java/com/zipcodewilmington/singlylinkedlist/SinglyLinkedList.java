@@ -3,7 +3,7 @@ package com.zipcodewilmington.singlylinkedlist;
 /**
  * Created by leon on 1/10/18.
  */
-public class SinglyLinkedList<T extends Comparable> {
+public class SinglyLinkedList<T extends Comparable<T>> {
 
     class Node{
         T data;
@@ -65,6 +65,7 @@ public class SinglyLinkedList<T extends Comparable> {
             internalIndex++;
         }
 
+        //if you reach end of list or the input index, skip over current node
         prev.next = current.next;
     }
 
@@ -190,7 +191,7 @@ public class SinglyLinkedList<T extends Comparable> {
             head = current;
         }
 
-        //add reversed elements to reveredList
+        //add reversed elements to reversedList
         SinglyLinkedList<T> reversedList = new SinglyLinkedList<T>();
         Node newCurrent = head;
         while(newCurrent != null){
@@ -207,7 +208,7 @@ public class SinglyLinkedList<T extends Comparable> {
         int internalIndex = 0;
 
         while(current != null){
-            if(internalIndex>=startIndex && internalIndex<=stopIndex){
+            if(internalIndex>=startIndex && internalIndex<stopIndex){
                 sliceList.add(current.data);
             }
             current = current.next;

@@ -184,7 +184,7 @@ public class SinglyLinkedListTest {
     }
 
     @Test
-    public void testRemove(){
+    public void testRemove1(){
         SinglyLinkedList<String> myList = new SinglyLinkedList<String>();
 
         String string1 = "Hello 1";
@@ -211,6 +211,36 @@ public class SinglyLinkedListTest {
         Assert.assertEquals(expected2,actual2);
         Assert.assertEquals(expected3,actual3);
     }
+
+    @Test
+    public void testRemove2(){
+        SinglyLinkedList<String> myList = new SinglyLinkedList<String>();
+
+        String string1 = "Hello 1";
+        String string2 = "Hello 2";
+        String string3 = "Hello 3";
+
+        myList.add(string1);
+        myList.add(string2);
+        myList.add(string3);
+
+        myList.remove(2);
+
+
+        String expected1 = string1;
+        String actual1 = myList.get(0);
+
+        String expected2 = string2;
+        String actual2 = myList.get(1);
+
+        int expected3 = 2;
+        int actual3 = myList.size();
+
+        Assert.assertEquals(expected1,actual1);
+        Assert.assertEquals(expected2,actual2);
+        Assert.assertEquals(expected3,actual3);
+    }
+
 
     @Test
     public void testCopy(){
@@ -331,7 +361,7 @@ public class SinglyLinkedListTest {
         myList.add(string4);
         myList.add(string5);
 
-        SinglyLinkedList<String> sliceList = myList.slice(1,3);
+        SinglyLinkedList<String> sliceList = myList.slice(1,4);
 
         String expected1 = string2;
         String actual1 = sliceList.get(0);
